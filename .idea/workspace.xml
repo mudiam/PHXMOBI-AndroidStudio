@@ -25,14 +25,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cfcf515-1187-46c7-ba7f-74b6ca13fa9d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circlefav.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/frame.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/frame2.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/parse/parsedevday/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/parse/parsedevday/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/parse/parsedevday/view/TalkListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/parse/parsedevday/view/TalkListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/circle.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_speaker.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_speaker.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_talk.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_talk.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="android.iws" />
@@ -56,10 +48,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TalkListAdapter.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TalkListAdapter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/parse/parsedevday/view/TalkListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37815127" vertical-offset="0" max-vertical-offset="1335">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
               <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
               <folding>
                 <element signature="e#2463#2913#0" expanded="true" />
@@ -140,11 +132,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TalkActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TalkActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/parse/parsedevday/view/TalkActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.0" vertical-offset="1521" max-vertical-offset="2385">
-              <caret line="122" column="85" selection-start-line="122" selection-start-column="85" selection-end-line="122" selection-end-column="85" />
+            <state vertical-scroll-proportion="-0.15992971" vertical-offset="1051" max-vertical-offset="2385">
+              <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -158,7 +150,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.962264" vertical-offset="225" max-vertical-offset="1200">
+            <state vertical-scroll-proportion="12.132075" vertical-offset="658" max-vertical-offset="1200">
               <caret line="1" column="33" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="33" />
               <folding />
             </state>
@@ -1270,11 +1262,16 @@
       <created>1410324455090</created>
       <updated>1410324455090</updated>
     </task>
+    <task id="LOCAL-00001" summary="Updates to make the schedule look better now. &#10; Images look good. &#10; background for fav also look good.">
+      <created>1410412209410</created>
+      <updated>1410412209410</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="967" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1296,7 +1293,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22588523" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22588523" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278496" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1321,6 +1318,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Updates to make the schedule look better now. &#10; Images look good. &#10; background for fav also look good." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates to make the schedule look better now. &#10; Images look good. &#10; background for fav also look good." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1529,27 +1528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_talk.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.962264" vertical-offset="225" max-vertical-offset="1200">
-          <caret line="1" column="33" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/parse/parsedevday/view/TalkActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.0" vertical-offset="1521" max-vertical-offset="2385">
-          <caret line="122" column="85" selection-start-line="122" selection-start-column="85" selection-end-line="122" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_talk_list.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -1603,11 +1581,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/parse/parsedevday/view/TalkListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37815127" vertical-offset="0" max-vertical-offset="1335">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
           <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
           <folding>
             <element signature="e#2463#2913#0" expanded="true" />
             <element signature="e#2906#2907#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_talk.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="12.132075" vertical-offset="658" max-vertical-offset="1200">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/parse/parsedevday/view/TalkActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.15992971" vertical-offset="1051" max-vertical-offset="2385">
+          <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
