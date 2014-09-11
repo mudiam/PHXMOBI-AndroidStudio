@@ -29,9 +29,8 @@ public class TalkListAdapter extends ArrayAdapter<Talk> {
   public View getView(int position, View view, ViewGroup parent) {
     // This is all pretty standard code for setting up an Android view.
     
-    if (view == null) {
-      view = View.inflate(getContext(), R.layout.list_item_talk, null);
-    }
+
+    view = View.inflate(getContext(), R.layout.list_item_talk, null);
 
     final Talk talk = getItem(position);
 
@@ -85,15 +84,13 @@ public class TalkListAdapter extends ArrayAdapter<Talk> {
     
     if (talk.isAlwaysFavorite()) {
       favoriteButton.setVisibility(View.GONE);
-      //photo.setVisibility(View.GONE);
-
     } else {
       favoriteButton.setVisibility(View.VISIBLE);
     }
     
     if (talk.isAlwaysFavorite()) {
       view.setBackgroundColor(Color.rgb(255, 255, 245));
-      view.findViewById(R.id.second_line).setVisibility(View.GONE);
+      view.findViewById(R.id.photo_circle_bg).setBackgroundResource(R.drawable.circlefav);
     } else {
       view.setBackgroundColor(Color.rgb(245, 245, 245));
     }

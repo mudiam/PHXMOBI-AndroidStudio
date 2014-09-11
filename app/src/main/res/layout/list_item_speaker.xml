@@ -4,12 +4,27 @@
     android:layout_height="match_parent"
     android:orientation="horizontal" >
 
-    <com.parse.ParseImageView
-        android:id="@+id/photo"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:contentDescription="@string/photo"
-        android:paddingBottom="5dp" />
+    <FrameLayout
+        android:id="@+id/photo_layout"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <com.parse.ParseImageView
+            android:id="@+id/photo"
+            android:adjustViewBounds="true"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:contentDescription="@string/photo"
+            android:paddingBottom="5dp" />
+        <ImageView android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/circle"
+            android:paddingBottom="5dp" />
+
+    </FrameLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
