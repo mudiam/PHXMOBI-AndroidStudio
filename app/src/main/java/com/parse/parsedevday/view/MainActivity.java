@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import com.parse.ParseAnalytics;
 import com.parse.parsedevday.R;
+import com.parse.twitter.Twitter;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -24,7 +25,9 @@ import android.view.Menu;
 public class MainActivity extends ActionBarActivity implements TabListener {
   private static final int TAB_SCHEDULE = 0;
   private static final int TAB_FAVORITES = 1;
-  private static final int TAB_COUNT = 2;
+  private static final int TAB_TWITTER = 2;
+  private static final int TAB_SPONSORS = 3;
+  private static final int TAB_COUNT = 4;
 
   /**
    * The {@link android.support.v4.view.PagerAdapter} that will provide fragments for each of the
@@ -109,6 +112,8 @@ public class MainActivity extends ActionBarActivity implements TabListener {
   public class SectionsPagerAdapter extends FragmentPagerAdapter {
     private TalkListFragment scheduleFragment = null;
     private TalkListFragment favoritesFragment = null;
+    private TwitterFragment  twitterFragment= null;
+    private SponsorsFragment sponsorsFragment = null;
 
     public SectionsPagerAdapter(FragmentManager fm) {
       super(fm);
@@ -135,6 +140,22 @@ public class MainActivity extends ActionBarActivity implements TabListener {
           }
           return favoritesFragment;
         }
+        case TAB_TWITTER:{
+            if (twitterFragment == null) {
+                twitterFragment = new TwitterFragment();
+                Bundle args = new Bundle();
+                twitterFragment.setArguments(args);
+            }
+            return twitterFragment;
+        }
+        case TAB_SPONSORS:{
+            if (sponsorsFragment == null) {
+                sponsorsFragment = new SponsorsFragment();
+                Bundle args = new Bundle();
+                sponsorsFragment.setArguments(args);
+            }
+            return sponsorsFragment;
+        }
       }
       return null;
     }
@@ -152,6 +173,11 @@ public class MainActivity extends ActionBarActivity implements TabListener {
           return getString(R.string.title_schedule).toUpperCase(l);
         case TAB_FAVORITES:
           return getString(R.string.title_favorites).toUpperCase(l);
+        case TAB_TWITTER:
+          return "#phxmobi";
+        case TAB_SPONSORS:
+          return "Sponsors".toUpperCase(l);
+
       }
       return null;
     }
