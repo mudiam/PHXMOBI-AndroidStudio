@@ -952,6 +952,7 @@ containing a value of this type.
         public static final int bio=0x7f070049;
         public static final int checkbox=0x7f07002d;
         public static final int collapseActionView=0x7f070011;
+        public static final int commentEditText=0x7f07004f;
         public static final int default_activity_button=0x7f070028;
         public static final int dialog=0x7f070012;
         public static final int disableHome=0x7f070008;
@@ -981,6 +982,8 @@ containing a value of this type.
         public static final int progress_circular=0x7f070018;
         public static final int progress_horizontal=0x7f070019;
         public static final int radio=0x7f07002f;
+        public static final int rate_button=0x7f070050;
+        public static final int ratingBar=0x7f07004d;
         public static final int room=0x7f07003f;
         public static final int scroll_view=0x7f070040;
         public static final int search_badge=0x7f070032;
@@ -1004,6 +1007,7 @@ containing a value of this type.
         public static final int tabMode=0x7f070002;
         public static final int talk_abstract=0x7f070041;
         public static final int talk_list=0x7f070042;
+        public static final int textView=0x7f07004e;
         public static final int time=0x7f07003e;
         public static final int title=0x7f07002b;
         public static final int title_company=0x7f070048;
@@ -1049,7 +1053,8 @@ containing a value of this type.
         public static final int fragment_twitter=0x7f03001d;
         public static final int list_item_speaker=0x7f03001e;
         public static final int list_item_talk=0x7f03001f;
-        public static final int support_simple_spinner_dropdown_item=0x7f030020;
+        public static final int rating=0x7f030020;
+        public static final int support_simple_spinner_dropdown_item=0x7f030021;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;

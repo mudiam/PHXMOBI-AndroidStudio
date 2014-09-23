@@ -14,8 +14,11 @@ import android.support.v7.app.ActionBarActivity;
 import android.text.TextUtils.TruncateAt;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -115,9 +118,31 @@ public class TalkActivity extends ActionBarActivity {
               }
           });
 
+          // Add the rating dialog.
+          LinearLayout scrollView = (LinearLayout) findViewById(R.id.scroll_view);
+
+          View ratingView = View.inflate(TalkActivity.this, R.layout.rating, null);
+
+          final RatingBar ratingBar = (RatingBar) ratingView.findViewById(R.id.ratingBar);
+          final EditText  ratingComments = (EditText) ratingView.findViewById(R.id.commentEditText);
+          Button rateItButton  = (Button) ratingView.findViewById(R.id.rate_button);
+
+          rateItButton.setOnClickListener(new OnClickListener() {
+              @Override
+              public void onClick(View v) {
+
+//TODO: create a new parse object and save it.If we already have already a rating for this user on this talk, we should update it.
+
+                  Toast toast = Toast.makeText(TalkActivity.this, "Great! Thanks for rating the seesion", Toast.LENGTH_LONG);
+                  toast.show();
+              }
+          });
+
+          scrollView.addView(ratingView);
+
+
           // Add a view for each speaker in the talk.
 
-          LinearLayout scrollView = (LinearLayout) findViewById(R.id.scroll_view);
           if (talk.getSpeakers() != null) {
               for (Speaker speaker : talk.getSpeakers()) {
                   View speakerView = View.inflate(TalkActivity.this, R.layout.list_item_speaker, null);
@@ -153,6 +178,9 @@ public class TalkActivity extends ActionBarActivity {
                   scrollView.addView(speakerView);
               }
           }
+
+
+
       }
     });
   }
