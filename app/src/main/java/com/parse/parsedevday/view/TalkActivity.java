@@ -3,12 +3,17 @@ package com.parse.parsedevday.view;
 import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseImageView;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+import com.parse.SaveCallback;
 import com.parse.parsedevday.R;
 import com.parse.parsedevday.model.Favorites;
 import com.parse.parsedevday.model.Speaker;
 import com.parse.parsedevday.model.Talk;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBar.LayoutParams;
 import android.support.v7.app.ActionBarActivity;
 import android.text.TextUtils.TruncateAt;
@@ -26,7 +31,12 @@ import android.widget.Toast;
  * An Activity to display information about a particular talk.
  */
 public class TalkActivity extends ActionBarActivity {
-  /**
+    private SharedPreferences mPrefs;
+    private EditText ratingComments;
+    private Button rateItButton;
+    private RatingBar ratingBar;
+
+    /**
    * Adds a click listener to toggle between text truncated with ellipses and the full text.
    * @param view the view the user can click to toggle.
    * @param textView the text view to collapse.
@@ -67,8 +77,10 @@ public class TalkActivity extends ActionBarActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_talk);
 
+      mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+
     // Fetch the data about this talk from Parse.
-    String talkId = Talk.getTalkId(getIntent().getData());
+    final String talkId = Talk.getTalkId(getIntent().getData());
     Talk.getInBackground(talkId, new GetCallback<Talk>() {
       @Override
       public void done(final Talk talk, ParseException e) {
@@ -123,20 +135,36 @@ public class TalkActivity extends ActionBarActivity {
 
           View ratingView = View.inflate(TalkActivity.this, R.layout.rating, null);
 
-          final RatingBar ratingBar = (RatingBar) ratingView.findViewById(R.id.ratingBar);
-          final EditText  ratingComments = (EditText) ratingView.findViewById(R.id.commentEditText);
-          Button rateItButton  = (Button) ratingView.findViewById(R.id.rate_button);
+            ratingBar = (RatingBar) ratingView.findViewById(R.id.ratingBar);
+            ratingComments = (EditText) ratingView.findViewById(R.id.commentEditText);
+            rateItButton  = (Button) ratingView.findViewById(R.id.rate_button);
 
-          rateItButton.setOnClickListener(new OnClickListener() {
-              @Override
-              public void onClick(View v) {
-
-//TODO: create a new parse object and save it.If we already have already a rating for this user on this talk, we should update it.
-
-                  Toast toast = Toast.makeText(TalkActivity.this, "Great! Thanks for rating the seesion", Toast.LENGTH_LONG);
-                  toast.show();
-              }
-          });
+          // if we have a rating object for this talk for this user.
+          String ratingId = mPrefs.getString(talkId, null);
+          final ParseObject ratingObject;
+          if ( ratingId != null){
+              rateItButton.setEnabled(false);
+              ParseQuery<ParseObject> query = ParseQuery.getQuery("Rating");
+              query.whereEqualTo("objectId",ratingId);
+              query.getFirstInBackground(new GetCallback<ParseObject>() {
+                  @Override
+                  public void done(final ParseObject parseObject, ParseException e) {
+                      if (parseObject != null) {
+                          runOnUiThread(new Runnable() {
+                              @Override
+                              public void run() {
+                                  ratingBar.setRating(((float) parseObject.getDouble("starrating")));
+                                  ratingComments.setText( parseObject.getString("comments"));
+                                  rateItButton.setEnabled(true);
+                              }
+                          });
+                      }
+                      setupRatingButton(rateItButton, talk, parseObject);
+                  }
+              });
+          }else{
+              setupRatingButton(rateItButton, talk, null);
+          }
 
           scrollView.addView(ratingView);
 
@@ -182,6 +210,38 @@ public class TalkActivity extends ActionBarActivity {
 
 
       }
+
+        private void setupRatingButton(Button rateItButton, final Talk talk, final ParseObject _rating) {
+
+            rateItButton.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    ParseObject myRating;
+
+                    if( _rating ==null){
+                        myRating = new ParseObject("Rating");
+                    }else{
+                       myRating = _rating;
+                    }
+
+                    myRating.put("starrating", ( ratingBar.getRating()));
+                    myRating.put("comments", ratingComments.getText().toString());
+                    myRating.put("talk", talk);
+
+                    final ParseObject myFinalRating = myRating;
+                    myRating.saveInBackground(new SaveCallback() {
+                        @Override
+                        public void done(ParseException e) {
+                            mPrefs.edit().putString(talkId, myFinalRating.getObjectId()).apply();
+                        }
+                    });
+
+                    Toast toast = Toast.makeText(TalkActivity.this, "Great! Thanks for rating this session!", Toast.LENGTH_LONG);
+                    toast.show();
+                }
+            });
+        }
     });
   }
 }
