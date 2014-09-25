@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
-import com.parse.parsedevday.R;
+import com.phxmobi.phxmobifestival.R;
 
 /**
  * A simple {@link Fragment} subclass.

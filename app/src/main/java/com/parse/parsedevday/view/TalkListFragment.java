@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
-import com.parse.parsedevday.R;
+import com.phxmobi.phxmobifestival.R;
 import com.parse.parsedevday.model.Favorites;
 import com.parse.parsedevday.model.Talk;
 import com.parse.parsedevday.model.TalkComparator;

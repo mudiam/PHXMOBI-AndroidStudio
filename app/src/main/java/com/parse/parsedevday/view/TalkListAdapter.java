@@ -1,7 +1,7 @@
 package com.parse.parsedevday.view;
 
 import com.parse.ParseImageView;
-import com.parse.parsedevday.R;
+import com.phxmobi.phxmobifestival.R;
 import com.parse.parsedevday.model.Favorites;
 import com.parse.parsedevday.model.Talk;
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.parse.parsedevday"
+    package="com.phxmobi.phxmobifestival"
     android:versionCode="2"
     android:versionName="1.1" >
 
@@ -14,7 +14,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:name=".ParseDevDayApp"
+        android:name="com.parse.parsedevday.ParseDevDayApp"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
@@ -42,7 +42,7 @@
             android:label="@string/app_name"
             android:parentActivityName="com.parse.parsedevday.view.MainActivity"
             android:configChanges="orientation"
-            android:screenOrientation=""
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

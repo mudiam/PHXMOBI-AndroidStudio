@@ -3,7 +3,6 @@ package com.parse.parsedevday.view;
 import java.util.Locale;
 
 import com.parse.ParseAnalytics;
-import com.parse.parsedevday.R;
 import com.parse.twitter.Twitter;
 
 import android.os.Bundle;
@@ -17,7 +16,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
-
+import com.phxmobi.phxmobifestival.R;
 /**
  * An Activity with a tabs for the complete schedule and the list of favorited talks. This was
  * originally created from an ADT wizard.

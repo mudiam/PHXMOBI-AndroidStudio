@@ -2,9 +2,9 @@ package com.parse.parsedevday.util;
 
 import com.parse.GetCallback;
 import com.parse.ParseException;
-import com.parse.parsedevday.R;
 import com.parse.parsedevday.model.Talk;
 import com.parse.parsedevday.view.TalkActivity;
+import com.phxmobi.phxmobifestival.R;
 
 import android.app.Notification;
 import android.app.NotificationManager;

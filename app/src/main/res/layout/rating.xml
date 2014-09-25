@@ -29,5 +29,6 @@
         android:layout_height="wrap_content"
         android:text="Rate it!"
         android:id="@+id/rate_button"
-        android:layout_gravity="right" />
+        android:layout_gravity="right"
+        android:background="#ffff6418" />
 </LinearLayout>

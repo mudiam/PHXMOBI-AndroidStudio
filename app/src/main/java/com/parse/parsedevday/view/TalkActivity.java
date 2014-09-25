@@ -6,7 +6,7 @@ import com.parse.ParseImageView;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.SaveCallback;
-import com.parse.parsedevday.R;
+import com.phxmobi.phxmobifestival.R;
 import com.parse.parsedevday.model.Favorites;
 import com.parse.parsedevday.model.Speaker;
 import com.parse.parsedevday.model.Talk;
@@ -211,11 +211,12 @@ public class TalkActivity extends ActionBarActivity {
 
       }
 
-        private void setupRatingButton(Button rateItButton, final Talk talk, final ParseObject _rating) {
+        private void setupRatingButton(final Button rateItButton, final Talk talk, final ParseObject _rating) {
 
             rateItButton.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    rateItButton.setEnabled(false);
 
                     ParseObject myRating;
 
