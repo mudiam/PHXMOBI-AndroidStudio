@@ -3,9 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/sponsors"
+
     tools:context="com.parse.parsedevday.view.TwitterFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- TODO: Update blank fragment layout    -->
 
 
 </FrameLayout>
